@@ -1,0 +1,33 @@
+### Location of data sources:
+
+
+A. thaliana
+
+PEAT:
+Reference: Originally reported in Morton et al., 2014.
+Source: Data was downloaded from the Megraw Lab server at https://drive.google.com/open?id=0B5WxM8Ere19uZmlHM1F3ZS1iWWc.
+Files (1):
+peat.sorted.bam
+
+EST:
+
+[Please fill this in]
+
+Z. mays (Maize)
+
+CAGE:
+Reference: Originally reported in Mejia-Guerra et al., 2015.
+Source: Data from the following SRA identifiers was downloaded:
+Files (8):
+SRR2078285
+SRR2078286
+SRR2078287
+SRR2078288
+SRR2078289
+SRR2078290
+SRR2078291
+SRR2078292
+
+
+
+
