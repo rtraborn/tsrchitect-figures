@@ -57,5 +57,16 @@ http://www.mmnt.net/db/0/0/ftp.arabidopsis.org/Sequences/ATH_cDNA_EST_sequences_
 ** These need to be aligned against the TAIR10 assembly and then converted into BED of GFF formats.
 
 
+Z. mays (Maize)
+Reference: Mejia-Guerra et al., 2015 (Plant Cell)
+Files (4):
+B73-root-1.bam
+B73-root-2.bam
+B73-shoot-1.bam
+B73-shoot-2.bam
+
+Note: these alignment files were obtained directly from the authors on January 28, 2017.
+
+
 
 
