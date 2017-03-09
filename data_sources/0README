@@ -11,6 +11,15 @@ peat.sorted.bam
 This file is found locally (via gnomic or bgnomic) at the following location:
 /projects/rtraborn/plant_promoters/A_thaliana/PEAT/bam_data/peat.sorted.bam
 
+CAGE/Oligo-Capping:
+Reference: Originally reported in Tokizawa et al., 2017
+Source: Raw sequence data was downloaded from DDBJ (Accession DRA004921) at the following link: ftp://ftp.ddbj.nig.ac.jp/ddbj_database/dra/fastq/DRA004/DRA004921
+Fastq Files (2):
+DRR066436_1.fastq
+DRR066436_2.fastq
+These files are found locally (via gnomic or bgnomic) at the following location:
+/scratch/rtraborn/At_Oligo_capping/DRA004921/DRX060399
+
 EST:
 
 [Please fill this in]
