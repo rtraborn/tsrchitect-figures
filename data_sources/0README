@@ -20,7 +20,7 @@ DRR066436_2.fastq
 These files are found locally (via gnomic or bgnomic) at the following location:
 /scratch/rtraborn/At_Oligo_capping/DRA004921/DRX060399
 
-No alingment files are currently available, as Taylor is waiting necessary information from the authors, who were contacted on 3/6/2017 via email.
+Alignment files are found here: <insert location>
 
 EST:
 
@@ -41,11 +41,9 @@ SRR2078290.sra
 SRR2078291.sra
 SRR2078292.sra
 
-These files are found locally at the following location:
-
-
-Needed: the original bam files corresponding to the above.
-
+The bam files are found locally at the following locations:
+/scratch/rtraborn/TSRchitect_plant_results/alignment_data/Tokizawa_CAGE_align.bam
+/scratch/rtraborn/TSRchitect_plant_results/alignment_data/Tokizawa_Vec_Capping_align.bam
 
 O. sativa japonia
 Reference: PlantGDB
@@ -63,9 +61,10 @@ ATH_EST_sequences_20101108.fas
 ATH_cDNA_sequences_20101108.fas
 
 Retrieved from TAIR at the following address:
-http://www.mmnt.net/db/0/0/ftp.arabidopsis.org/Sequences/ATH_cDNA_EST_sequences_FASTA
+ftp.arabidopsis.org/Sequences/ATH_cDNA_EST_sequences_FASTA
 
-** These need to be aligned against the TAIR10 assembly and then converted into BED of GFF formats.
+/scratch/rtraborn/TSRchitect_plant_results/Arabidopsis/EST_cDNA/ATH_EST_sequences_20101108.gsq
+/scratch/rtraborn/TSRchitect_plant_results/Arabidopsis/EST_cDNA/ATH_cDNA_sequences_20101108.gsq
 
 
 Z. mays (Maize)
