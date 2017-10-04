@@ -13,7 +13,7 @@ colnames(AtESTdist) <- c("chr","start1","end1", "ID1", "score", "strand1", "chr2
 head(AtESTdist)
 
 a <- ggplot(AtESTdist, aes(distance))
-a + geom_histogram(binwidth=10)
+a + geom_histogram()
 
 ggsave("AtEST_closest.png")
 
