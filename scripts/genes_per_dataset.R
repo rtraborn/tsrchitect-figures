@@ -3,6 +3,8 @@
 library(ggplot2)
 library(GenomicRanges)
 
+setwd("/scratch/rtraborn/tsrchitect-figures/figures")
+
 AtEST.file <- "/scratch/rtraborn/tsrchitect-figures/output_files/AtEST_closest_gene_i.txt"
 AtESTdist <- read.table(file=AtEST.file, header=FALSE)
 
@@ -33,7 +35,7 @@ colnames(n.prom) <- c("dataset", "class", "distance")
                    
 head(n.prom)
 
-b <- ggplot(n.prom, aes(y=distance, x=dataset, fill=class))
-b + geom_bar(stat="identity")
+b <- ggplot(n.prom, aes(distance))
+b + geom_bar()
 
 ggsave("distance_classes.png")
