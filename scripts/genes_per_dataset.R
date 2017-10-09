@@ -17,7 +17,7 @@ a + geom_histogram()
 
 ggsave("AtEST_closest.png")
 
-n.prom <- matrix(NA, nrow=4, ncol=2)
+n.prom <- matrix(NA, nrow=4, ncol=3)
 
 under100 <- length(which(AtESTdist[,17]<100))
 under500 <- length(which(AtESTdist[,17]<500))
@@ -26,13 +26,14 @@ above1k  <- length(which(AtESTdist[,17]>1000))
 
 n.prom[,1] <- c("AtEST")                   
 n.prom[,2] <- c(under100, under500, under1000, above1k)
+n.prom[,3] <- c("under100", "under500", "under1000", "above1k")
 
 n.prom <- as.data.frame(n.prom)
-colnames(n.prom) <- c("dataset", "distance")
+colnames(n.prom) <- c("dataset", "class", "distance")
                    
 head(n.prom)
 
-b <- ggplot(n.prom, fill=distance))
-b + geom_bar(position="stack")
+b <- ggplot(n.prom, aes(y=distance, x=dataset, fill=class))
+b + geom_bar(stat="identity")
 
 ggsave("distance_classes.png")
