@@ -32,7 +32,7 @@ colnames(n.prom) <- c("dataset", "distance")
                    
 head(n.prom)
 
-b <- ggplot(n.prom, aes(dataset))
+b <- ggplot(n.prom, aes(distance))
 b + geom_bar(position="stack")
 
 ggsave("distance_classes.png")
