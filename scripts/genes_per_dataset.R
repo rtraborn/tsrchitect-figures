@@ -2,6 +2,7 @@
 
 library(ggplot2)
 library(GenomicRanges)
+library(reshape2)
 
 setwd("/scratch/rtraborn/tsrchitect-figures/figures")
 
@@ -19,7 +20,7 @@ a + geom_histogram()
 
 ggsave("AtEST_closest.png")
 
-n.prom <- matrix(NA, nrow=4, ncol=2)
+n.prom <- matrix(NA, nrow=1, ncol=4)
 
 under100 <- length(which(AtESTdist[,17]<100))
 under500 <- length(which(AtESTdist[,17]<500))
@@ -34,7 +35,6 @@ colnames(n.prom) <- c("class", "distance")
                    
 head(n.prom)
 
-b <- ggplot(n.prom, aes(distance))
-b + geom_bar()
+b + geom_bar(stat="identity", fill=c("blue","red","orange","navy")) + 
 
 ggsave("distance_classes.png")
