@@ -1,37 +1,22 @@
 
 library(Biostrings)
-
 library(seqLogo)
 
 setwd("/scratch/rtraborn/TSRchitect_plant_results/analysis_scripts")
 
 fa.list <- list.files(pattern="*.fa")
-
-fa.list
-
 PEAT_fa <- readDNAStringSet(fa.list[1], format="fasta")
-
-PEAT_fa
-
-PEAT_fa_i <- PEAT_fa[width(PEAT_fa)==5,]
-
-PEAT_fa_i
-
+PEAT_fa_i <- PEAT_fa[width(PEAT_fa)==10,]
 PEAT_matrix <- consensusMatrix(PEAT_fa_i)
-
 PEAT_matrix2 <- PEAT_matrix[1:4,]
-
-dim(PEAT_matrix2)
-
-head(PEAT_matrix2)
+#dim(PEAT_matrix2)
+#head(PEAT_matrix2)
 
 PEAT_sum <- apply(PEAT_matrix2, 2, "sum")
-
 PEAT_ma <- rbind(PEAT_matrix2, PEAT_sum)
 
 #colnames(PEAT_df) <- c("1","2","3","4","5")
-
-is(PEAT_ma)
+#is(PEAT_ma)
 
 PEAT_sw <- sweep(PEAT_ma, 2, PEAT_ma[5,],'/')
 

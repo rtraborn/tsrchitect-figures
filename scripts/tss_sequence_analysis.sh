@@ -68,10 +68,10 @@ echo "Converting the TSS files to bed format."
 
 echo "Selecting TSS datasets above the defined threshold."
 
-awk '(NR>1) && ($5 >= '4') ' $TokCAGE_out > $(basename $TokCAGE_out .bed)_cutoff.bed
+awk '(NR>1) && ($5 >= '10') ' $TokCAGE_out > $(basename $TokCAGE_out .bed)_cutoff.bed
 awk '(NR>1) && ($5 >= '4') ' $TokVec_out > $(basename $TokVec_out .bed)_cutoff.bed
-awk '(NR>1) && ($5 >= '4') ' $AtEST_out > $(basename $AtEST_out .bed)_cutoff.bed
-awk '(NR>1) && ($5 >= '4') ' $PEAT_out > $(basename $PEAT_out .bed)_cutoff.bed
+awk '(NR>1) && ($5 >= '10') ' $AtEST_out > $(basename $AtEST_out .bed)_cutoff.bed
+awk '(NR>1) && ($5 >= '10') ' $PEAT_out > $(basename $PEAT_out .bed)_cutoff.bed
 
 cat $(basename $TokCAGE_out .bed)_cutoff.bed | awk -F'\t' 'BEGIN{SUM=0}{ SUM+=$3-$2 }END{print SUM}'
 

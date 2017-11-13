@@ -12,7 +12,6 @@ Zm_genes=/projects/TSRplants/ZmCAGE/annotation/Zm_genes.bed
 Zm_genes_nuc=/projects/TSRplants/ZmCAGE/annotation/Zm_genes_nuc.bed
 Zm_output_dir=/projects/TSRplants/ESTcDNA/Z_mays/tsrOut/
 
-
 PEAT_dir=/scratch/rtraborn/TSRchitect_plant_results/Arabidopsis/Morton_PEAT
 PEAT_m=/scratch/rtraborn/TSRchitect_plant_results/Arabidopsis/Morton_PEAT/TSSset-1_sum.bed
 PEATbam=/projects/TSRplants/AtPEAT/alignment/AtPEAT.bam
