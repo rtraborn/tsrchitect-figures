@@ -27,21 +27,22 @@ TokVec_out=TokVec_out.bed
 TokVec_out2=TokVec_out2.bed
 TokVec_fa=TokizawaVec_tsrs.fa
 
-uniq -c $PEAT_dir/$PEATtss | awk '{ print $2,$3,$4,$5,$1,$7}' | perl -p -e 's/ /\t/g' | awk 'BEGIN{OFS="\t";} $5>=3 {print }' > $PEAT_dir/$PEAT_m
+uniq -c $PEAT_dir/$PEATtss | awk '{ print $2,$3,$4,$5,$1,$7}' | perl -p -e 's/ /\t/g' | awk 'BEGIN{OFS="\t";} $5>=10 {print }' > $PEAT_dir/$PEAT_m
+
 bedtools intersect -s -u -a $PEAT_dir/$PEAT_m -b $PEAT_dir/$PEATtsrs > $PEAT_dir/$PEAT_out
 bedtools slop -l 2 -r 2 -s -i $PEAT_dir/$PEAT_out -g $At_g  > $PEAT_dir/$PEAT_out2
 bedtools getfasta -s -fi $At_fa -bed $PEAT_dir/$PEAT_out2 -fo $PEAT_fa
 
 echo "Finished job 1"
 
-uniq -c $TokCAGE_dir/$TokCAGE_tss | awk '{ print $2,$3,$4,$5,$1,$7}' | perl -p -e 's/ /\t/g' | awk 'BEGIN{OFS="\t";} $5>=3 {print }' > $TokCAGE_dir/$TokCAGE_m
+uniq -c $TokCAGE_dir/$TokCAGE_tss | awk '{ print $2,$3,$4,$5,$1,$7}' | perl -p -e 's/ /\t/g' | awk 'BEGIN{OFS="\t";} $5>=10 {print }' > $TokCAGE_dir/$TokCAGE_m
 bedtools intersect -s -u -a $TokCAGE_dir/$TokCAGE_m -b $TokCAGE_dir/$TokCAGE_tsrs > $TokCAGE_dir/$TokCAGE_out
 bedtools slop -l 2 -r 2 -s -i $TokCAGE_dir/$TokCAGE_out -g $At_g > $TokCAGE_dir/$TokCAGE_out2
 bedtools getfasta -s -fi $At_fa -bed $TokCAGE_dir/$TokCAGE_out2 -fo $TokCAGE_fa
 
 echo "Finished job 2"
 
-uniq -c $TokVec_dir/$TokVec_tss | awk '{ print $2,$3,$4,$5,$1,$7}' | perl -p -e 's/ /\t/g' | awk 'BEGIN{OFS="\t";} $5>=3 {print }' > $TokVec_dir/$TokVec_m
+uniq -c $TokVec_dir/$TokVec_tss | awk '{ print $2,$3,$4,$5,$1,$7}' | perl -p -e 's/ /\t/g' | awk 'BEGIN{OFS="\t";} $5>=10 {print }' > $TokVec_dir/$TokVec_m
 bedtools intersect -s -u -a $TokVec_dir/$TokVec_m -b $TokVec_dir/$TokVec_tsrs > $TokVec_dir/$TokVec_out
 bedtools slop -l 2 -r 2 -s -i $TokVec_dir/$TokVec_out -g $At_g  > $TokVec_dir/$TokVec_out2
 bedtools getfasta -s -fi $At_fa -bed $TokVec_dir/$TokVec_out2 -fo $TokVec_fa
