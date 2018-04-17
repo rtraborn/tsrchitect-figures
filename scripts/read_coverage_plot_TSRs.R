@@ -69,34 +69,34 @@ print(head(AtPEAT.m))
 print(head(AtOligo.m))
 print(head(AtCAGE.m))
 
-n.total <- length(as.numeric(AtPEAT.m$nTags))
+n.total <- sum(as.numeric(AtPEAT.m$nTags))
 print(n.total)
-p.downstream <- length(AtPEAT.m[AtPEAT.m$Region=="Downstream",2])/n.total
-p.upstream <- length(AtPEAT.m[AtPEAT.m$Region=="Upstream",2])/n.total
-p.cds <- length(AtPEAT.m[AtPEAT.m$Region=="CDS",2])/n.total
-p.introns <- length(AtPEAT.m[AtPEAT.m$Region=="Introns",2])/n.total
-p.intergenic <- length(AtPEAT.m[AtPEAT.m$Region=="Intergenic",2])/n.total
+p.downstream <- sum(AtPEAT.m[AtPEAT.m$Region=="Downstream",2])/n.total
+p.upstream <- sum(AtPEAT.m[AtPEAT.m$Region=="Upstream",2])/n.total
+p.cds <- sum(AtPEAT.m[AtPEAT.m$Region=="CDS",2])/n.total
+p.introns <- sum(AtPEAT.m[AtPEAT.m$Region=="Introns",2])/n.total
+p.intergenic <- sum(AtPEAT.m[AtPEAT.m$Region=="Intergenic",2])/n.total
 
 AtTSR.df <- data.frame(matrix(NA, nrow=5, ncol=3))
 colnames(AtTSR.df) <- c("AtPEAT-tsr","AtCAGE-tsr","AtOligo-tsr")
 
 AtTSR.df[,1] <- c(p.upstream, p.downstream, p.cds, p.introns, p.intergenic)
 
-n.total <- length(as.numeric(AtCAGE.m$nTags))
-p.downstream <- length(AtCAGE.m[AtCAGE.m$Region=="Downstream",2])/n.total
-p.upstream <- length(AtCAGE.m[AtCAGE.m$Region=="Upstream",2])/n.total
-p.cds <- length(AtCAGE.m[AtCAGE.m$Region=="CDS",2])/n.total
-p.introns <- length(AtCAGE.m[AtCAGE.m$Region=="Introns",2])/n.total
-p.intergenic <- length(AtCAGE.m[AtCAGE.m$Region=="Intergenic",2])/n.total
+n.total <- sum(as.numeric(AtCAGE.m$nTags))
+p.downstream <- sum(AtCAGE.m[AtCAGE.m$Region=="Downstream",2])/n.total
+p.upstream <- sum(AtCAGE.m[AtCAGE.m$Region=="Upstream",2])/n.total
+p.cds <- sum(AtCAGE.m[AtCAGE.m$Region=="CDS",2])/n.total
+p.introns <- sum(AtCAGE.m[AtCAGE.m$Region=="Introns",2])/n.total
+p.intergenic <- sum(AtCAGE.m[AtCAGE.m$Region=="Intergenic",2])/n.total
 
 AtTSR.df[,2] <- c(p.upstream, p.downstream, p.cds, p.introns, p.intergenic)
 
-n.total <- length(as.numeric(AtOligo.m$nTags))
-p.downstream <- length(AtOligo.m[AtOligo.m$Region=="Downstream",2])/n.total
-p.upstream <- length(AtOligo.m[AtOligo.m$Region=="Upstream",2])/n.total
-p.cds <- length(AtOligo.m[AtOligo.m$Region=="CDS",2])/n.total
-p.introns <- length(AtOligo.m[AtOligo.m$Region=="Introns",2])/n.total
-p.intergenic <- length(AtOligo.m[AtOligo.m$Region=="Intergenic",2])/n.total
+n.total <- sum(as.numeric(AtOligo.m$nTags))
+p.downstream <- sum(AtOligo.m[AtOligo.m$Region=="Downstream",2])/n.total
+p.upstream <- sum(AtOligo.m[AtOligo.m$Region=="Upstream",2])/n.total
+p.cds <- sum(AtOligo.m[AtOligo.m$Region=="CDS",2])/n.total
+p.introns <- sum(AtOligo.m[AtOligo.m$Region=="Introns",2])/n.total
+p.intergenic <- sum(AtOligo.m[AtOligo.m$Region=="Intergenic",2])/n.total
 
 AtTSR.df[,3] <- c(p.upstream, p.downstream, p.cds, p.introns, p.intergenic)
 
