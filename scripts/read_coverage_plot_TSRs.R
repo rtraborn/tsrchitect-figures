@@ -48,6 +48,8 @@ AtOligo.intergenic.cov <- read.table(file=AtOligo.intergenic, header=FALSE)
 
 AtPEAT.cov <- cbind(AtPEAT.downstream.cov[,10], AtPEAT.upstream.cov[,10], AtPEAT.cds.cov[,10], AtPEAT.introns.cov[,10], AtPEAT.intergenic.cov[,4])
 colnames(AtPEAT.cov) <- c("Downstream", "Upstream", "CDS", "Introns", "Intergenic")
+print(head(AtPEAT.cov))
+print(tail(AtPEAT.cov))
 AtCAGE.cov <- cbind(AtCAGE.downstream.cov[,10], AtCAGE.upstream.cov[,10], AtCAGE.cds.cov[,10], AtCAGE.introns.cov[,10], AtCAGE.intergenic.cov[,4])
 colnames(AtCAGE.cov) <- c("Downstream", "Upstream", "CDS", "Introns", "Intergenic")
 AtOligo.cov <- cbind(AtOligo.downstream.cov[,10], AtOligo.upstream.cov[,10], AtOligo.cds.cov[,10], AtOligo.introns.cov[,10], AtOligo.intergenic.cov[,4])

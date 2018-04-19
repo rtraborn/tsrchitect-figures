@@ -7,9 +7,9 @@ AtPEAT_pos=/projects/TSRplantsV2.0/At/AtPEAT/tsr/AtPEAT_tss.pos
 AtCAGE_pos=/projects/TSRplantsV2.0/At/AtCAGE/tsr/AtCAGE_tss.pos
 AtOligo_pos=/projects/TSRplantsV2.0/At/AtOligo/tsr/AtOligo_tss.pos
 AtOligo_bed=/projects/TSRplantsV2.0/At/AtCoveragePlots/AtOligotss_corr.bed
-AtPEAT_thresh=/projects/TSRplantsV2.0/At/AtDistPlots/pos_files/AtPEATtss_filtered.pos
+AtPEAT_thresh=/projects/TSRplantsV2.0/At/AtDistPlots/pos_files/AtPEATtss_filtered_new.pos
 AtCAGE_thresh=/projects/TSRplantsV2.0/At/AtDistPlots/pos_files/AtCAGEtss_filtered.pos
-AtOligo_thresh=/projects/TSRplantsV2.0/At/AtDistPlots/pos_files/AtOligo_tss_filtered.pos 
+AtOligo_thresh=/projects/TSRplantsV2.0/At/AtDistPlots/pos_files/AtOligo_tss_filtered_new.pos 
 
 cd $WD
 
@@ -20,10 +20,10 @@ cut -f1,2 ${At_genome}.fai > TAIR10.genome
 
 #echo "Converting the .pos formatted TSSs to BED format"
 
-#pos2bed.pl $AtPEAT_pos > AtPEATtss.bed
+pos2bed.pl $AtPEAT_pos > AtPEATtss.bed
 #pos2bed.pl $AtCAGE_pos > AtCAGEtss.bed
-#pos2bed.pl $AtOligo_pos > AtOligotss.bed
-#pos2bed.pl $AtPEAT_thresh > AtPEATtss_t.bed
+pos2bed.pl $AtOligo_pos > AtOligotss.bed
+pos2bed.pl $AtPEAT_thresh > AtPEATtss_t.bed
 #pos2bed.pl $AtCAGE_thresh > AtCAGEtss_t.bed
 pos2bed.pl $AtOligo_thresh > AtOligotss_t.bed
 
@@ -42,11 +42,11 @@ echo "Creating intervals reflecting the desired genomic segments"
 echo "Performing coverage analysis of all TSSs"
 
 echo "AtPEAT"
-#bedtools coverage -s -counts -a AtPEATtss.bed -b At_upstream.gff3 > AtPEAT_upstream.coverage
-#bedtools coverage -s -counts -a AtPEATtss.bed -b At_downstream.gff3 > AtPEAT_downstream.coverage
-#bedtools coverage -s -counts -a AtPEATtss.bed -b At_cds.gff3 > AtPEAT_cds.coverage
-#bedtools coverage -s -counts -a AtPEATtss.bed -b At_introns.gff3 > AtPEAT_introns.coverage
-#bedtools coverage -counts -a AtPEATtss.bed -b At_intergenic.bed > AtPEAT_intergenic.coverage
+bedtools coverage -s -counts -a AtPEATtss.bed -b At_upstream.gff3 > AtPEAT_upstream.coverage
+bedtools coverage -s -counts -a AtPEATtss.bed -b At_downstream.gff3 > AtPEAT_downstream.coverage
+bedtools coverage -s -counts -a AtPEATtss.bed -b At_cds.gff3 > AtPEAT_cds.coverage
+bedtools coverage -s -counts -a AtPEATtss.bed -b At_introns.gff3 > AtPEAT_introns.coverage
+bedtools coverage -counts -a AtPEATtss.bed -b At_intergenic.bed > AtPEAT_intergenic.coverage
 
 echo "AtOligo"
 bedtools coverage -s -counts -a $AtOligo_bed -b At_upstream.gff3 > AtOligo_upstream.coverage
@@ -65,11 +65,11 @@ echo "AtCAGE"
 echo "Performing coverage analysis of all above-threshold TSSs"
 
 echo "AtPEAT"
-#bedtools coverage -s -counts -a AtPEATtss_t.bed -b At_upstream.gff3 > AtPEAT_t_upstream.coverage
-#bedtools coverage -s -counts -a AtPEATtss_t.bed -b At_downstream.gff3 > AtPEAT_t_downstream.coverage
-#bedtools coverage -s -counts -a AtPEATtss_t.bed -b At_cds.gff3 > AtPEAT_t_cds.coverage
-#bedtools coverage -s -counts -a AtPEATtss_t.bed -b At_introns.gff3 > AtPEAT_t_introns.coverage
-#bedtools coverage -counts -a AtPEATtss_t.bed -b At_intergenic.bed > AtPEAT_t_intergenic.coverage
+bedtools coverage -s -counts -a AtPEATtss_t.bed -b At_upstream.gff3 > AtPEAT_t_upstream.coverage
+bedtools coverage -s -counts -a AtPEATtss_t.bed -b At_downstream.gff3 > AtPEAT_t_downstream.coverage
+bedtools coverage -s -counts -a AtPEATtss_t.bed -b At_cds.gff3 > AtPEAT_t_cds.coverage
+bedtools coverage -s -counts -a AtPEATtss_t.bed -b At_introns.gff3 > AtPEAT_t_introns.coverage
+bedtools coverage -counts -a AtPEATtss_t.bed -b At_intergenic.bed > AtPEAT_t_intergenic.coverage
 
 echo "AtOligo"
 bedtools coverage -s -counts -a AtOligotss_t.bed -b At_upstream.gff3 > AtOligo_t_upstream.coverage
