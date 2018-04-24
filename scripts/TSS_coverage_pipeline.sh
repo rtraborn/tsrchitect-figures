@@ -7,7 +7,7 @@ AtPEAT_pos=/projects/TSRplantsV2.0/At/AtPEAT/tsr/AtPEAT_tss.pos
 AtCAGE_pos=/projects/TSRplantsV2.0/At/AtCAGE/tsr/AtCAGE_tss.pos
 AtOligo_pos=/projects/TSRplantsV2.0/At/AtOligo/tsr/AtOligo_tss.pos
 AtOligo_bed=/projects/TSRplantsV2.0/At/AtCoveragePlots/AtOligotss_corr.bed
-AtPEAT_thresh=/projects/TSRplantsV2.0/At/AtDistPlots/pos_files/AtPEATtss_filtered_new.pos
+AtPEAT_thresh=/projects/TSRplantsV2.0/At/AtDistPlots/pos_files/AtPEATtss_filtered_new2.pos
 AtCAGE_thresh=/projects/TSRplantsV2.0/At/AtDistPlots/pos_files/AtCAGEtss_filtered.pos
 AtOligo_thresh=/projects/TSRplantsV2.0/At/AtDistPlots/pos_files/AtOligo_tss_filtered_new.pos 
 
