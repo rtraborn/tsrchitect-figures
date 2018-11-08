@@ -1,9 +1,9 @@
-myWD <- "/projects/TSRplantsV2.0/At/AtCoveragePlots"
+myWD <- "/scratch/rtraborn/tsrchitect-figures/"
 setwd(myWD)
 
-PEATtsr <- "/projects/TSRplantsV2.0/At/AtPEAT/tsr/TSRset-1.txt"
-CAGEtsr <- "/projects/TSRplantsV2.0/At/AtCAGE/tsr/TSRset-1.txt"
-Oligotsr <- "/projects/TSRplantsV2.0/At/AtOligo/tsr/TSRset-1.txt"
+PEATtsr <- "/projects/TSRplantsV3.0/At/AtPEAT/tsr/TSRset-1.txt"
+CAGEtsr <- "/projects/TSRplantsV3.0/At/AtCAGE/tsr/TSRset-1.txt"
+Oligotsr <- "/projects/TSRplantsV3.0/At/AtOligo/tsr/TSRset-1.txt"
 
 AtTSR <- read.table(PEATtsr, header=TRUE)                                     
 AtTSR.p <- AtTSR[AtTSR$strand=="+",]
